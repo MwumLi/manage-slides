@@ -1,0 +1,12 @@
+# mac hidden
+.DS_Store
+
+# vim temp
+.swp
+
+
+# node modules
+node_modules
+
+# ignore build results
+dist
