@@ -1,7 +1,8 @@
 import './index.less';
 
-document.title = APP_NAME;
-document.querySelector(".title").textContent = APP_NAME;
+const { appName, manifests } = window.__APP;
+document.title = appName;
+document.querySelector(".title").textContent = `${appName}'s Slides`;
 
 const colorsMap = {
   red: "#f44336",
@@ -26,7 +27,7 @@ const colorsMap = {
   blueGrey: "#607d8b"
 };
 const colors = Object.values(colorsMap);
-const ppts = MANITESTS || [];
+const ppts = manifests || [];
 ppts.forEach((item, i) => {
   item.color = colors[i % colors.length];
 });
