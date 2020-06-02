@@ -1,23 +1,25 @@
 {
   "name": "slide-manager",
-  "version": "1.0.0",
-  "description": "集中管理你的 reveal.js ppt",
-  "main": "index.js",
-  "scripts": {
-    "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./scripts/webpack.config.js --quiet",
-    "build": "cross-env NODE_ENV=production webpack --mode production --config ./scripts/webpack.config.js"
+  "version": "0.0.1",
+  "description": "Centrally manage your slides by reveal.js",
+  "bin": {
+    "slide-manager": "./bin/index.js",
+    "sm": "./bin/index.js"
   },
-  "keywords": [],
-  "author": "MwumLi",
-  "license": "ISC",
-  "dependencies": {
-    "cross-env": "^7.0.2",
-    "reveal.js": "^4.0.0"
+  "keywords": [
+    "reveal.js",
+    "cli",
+    "command"
+  ],
+  "author": {
+    "name": "MwumLi",
+    "email": "mwumli@hotmail.com"
   },
+  "license": "MIT",
   "app": {
     "name": "MwumLi's Slides"
   },
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.6",
@@ -27,11 +29,13 @@
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "fs-extra": "^9.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "less-loader": "^6.1.0",
     "node-html-parser": "^1.2.17",
     "node-notifier": "^7.0.1",
+    "reveal.js": "^4.0.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
