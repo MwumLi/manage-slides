@@ -1,6 +1,6 @@
 {
   "name": "slide-manager",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Centrally manage your slides by reveal.js",
   "bin": {
     "slide-manager": "./bin/index.js",
