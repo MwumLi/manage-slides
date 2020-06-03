@@ -1,10 +1,10 @@
 {
-  "name": "slide-manager",
+  "name": "manage-slides",
   "version": "0.1.0",
   "description": "Centrally manage your slides by reveal.js",
   "bin": {
-    "slide-manager": "./bin/index.js",
-    "sm": "./bin/index.js"
+    "manage-slides": "./bin/index.js",
+    "ms": "./bin/index.js"
   },
   "keywords": [
     "reveal.js",
@@ -16,9 +16,6 @@
     "email": "mwumli@hotmail.com"
   },
   "license": "MIT",
-  "app": {
-    "name": "MwumLi's Slides"
-  },
   "dependencies": {
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",

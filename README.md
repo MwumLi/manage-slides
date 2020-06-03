@@ -1,4 +1,4 @@
-# ppts
+# manage-slides
 
 集中管理 [reveal.js](https://revealjs.com/) 撰写的 ppt   
 来吧, 别让你的 ppt 沉默了 !  
@@ -8,7 +8,8 @@
 ### 初始化 slide 项目
 
 ``` bash
-$ npx slide-manager init my-slide
+# 把一个目录 my-slide 初始化成一个 slide 项目
+$ npx manage-slides init my-slide
 # 展示目录结构
 $ tree -L 1 my-slide
 my-slide
@@ -28,6 +29,7 @@ index.html    index.js      manifest.json
 ### 运行本地服务
 
 运行本地服务, 实时查看改动效果:  
+
 ``` bash
 my-slide $ npm run serve
  DONE  Compiled successfully in 1438ms                                                                                                           10:18:49 PM
