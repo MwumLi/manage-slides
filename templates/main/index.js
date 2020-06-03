@@ -1,8 +1,8 @@
 import './index.less';
 
-const { appName, manifests } = window.__APP;
+const { appName, manifests, title } = window.__APP;
 document.title = appName;
-document.querySelector(".title").textContent = `${appName}'s Slides`;
+document.querySelector(".title").textContent = title || `${appName}'s Slides`;
 
 const colorsMap = {
   red: "#f44336",
