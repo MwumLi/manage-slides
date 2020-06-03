@@ -15,6 +15,10 @@
     "name": "MwumLi",
     "email": "mwumli@hotmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MwumLi/manage-slides.git"
+  },
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.9.6",
