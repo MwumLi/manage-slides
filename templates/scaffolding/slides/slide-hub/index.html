@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>打造属于你的 slide hub</title>
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <h2>打造属于你的 slide hub</h2>
+      </section>
+      <section>
+        <section>经常面临的一些场景</section>
+        <section>
+          <h3>情景一</h3>
+          <p class="fragment">老大: 小李, 别写代码了, 明天给大家分享一下吧</p>
+          <div class="fragment">
+            啊!(懵逼。。。)
+            <img src="images/what-ppt.gif" alt="" style="position: absolute;">
+          </div>
+        </section>
+        <section>
+          <h3>情景二</h3>
+          <p class="fragment">这种类型 ppt 之前写过了, 到时候直接拿来用</p>
+          <p class="fragment">演讲前夕...</p>
+          <p class="fragment">我去, 之前的 ppt 跑到哪里去了?</p>
+          <!-- <p>难道得重写~~~</p> -->
+        </section>
+        <section>
+          <img src="images/sad.png" alt="">
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>
+            演示文稿哪家强
+          </h3>
+          <ul>
+            <li class="fragment">Microsoft PowerPoint</li>
+            <li class="fragment">
+              <a href="https://www.google.com/slides/about/" target="_blank">Google Slide</a>
+            </li>
+            <li class="fragment">
+              <a href="https://www.apple.com/keynote/" target="_blank">Keynote</a>
+            </li>
+            <li class="fragment">
+              <a href="https://ppt.baomitu.com/" target="_blank">声享</a>
+            </li>
+            <li class="fragment">
+              <a href="https://github.com/hakimel/reveal.js" target="_blank">属于前端开发者的 reveal.js</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>打造属于你的 slide hub</section>
+        <section>
+          <h3>
+            <a href="https://github.com/MwumLi/manage-slides" target="_blank">manage-slides</a>
+          </h3>
+          <ul>
+            <li class="fragment">统一管理: 再也不用担心你的 ppt 找不到</li>
+            <li class="fragment">集成 reveal.js: 作为前端开发者和markdown开发者一定不能错过</li>
+            <li class="fragment">包容: 可以存储 slide 在 hub, 也可以直接外链</li>
+            <li class="fragment">部署简单: 利用 ci 自动部署</li>
+          </ul>
+        </section>
+        <!-- <section data-background="images/slide-main.png"></section> -->
+      </section>
+      <!-- 快速开始 -->
+      <section>
+        快速开始
+        <pre>
+          <code data-trim class="hljs bash">
+            # 创建一个目录
+            $ mkdir my-slide && cd my-slide
+
+            # 初始化成一个 slide 项目
+            $ npx manage-slides init my-slide
+            
+            # 运行
+            my-slide $ npm run serve
+            DONE Compiled successfully in 1438ms 10:18:49 PM
+  
+            I Project is running at http://localhost:8080/
+            </code>
+        </pre>
+      </section>
+      <!-- 如何新增一个 slide -->
+      <section>
+        <section>如何新增一个 slide</section>
+        <section>
+          <h3>创建一个常规的 slide</h3>
+          <pre><code data-trim class="hljs bash">
+          # 新增 一个 slide "normal"
+          my-slide $ npx manage-slides add normal
+
+          # 查看新增 slide
+          my-slide $ ls slides/normal
+          index.html index.js manifest.json
+          </code></pre>
+          <p class="fragment">ok, 已经新增一个简单的 slide, 你可以按照<a href="https://github.com/hakimel/reveal.js">reveal.js</a> 语法来写 slide 内容了</li>
+          </p>
+        </section>
+        <section>
+          <p>如果你的 slide 或者你喜欢 slide 另外有位置发布, 那么你可以添加一个清两级 slide</p>
+          <pre><code data-trim class="hljs bash">
+            my-slide $ npx manage-slides -l light
+          </code></pre>
+          <p>现在有了一个 <code>light/manifest.json</code></p>
+          <p>编辑 <code>manifest.json</code> 更新你的 slide 信息</p>
+        </section>
+        <section>
+          <h3>两种方式有何不同?</h3>
+          <p>并没有太多不同</p>
+          <p>常规 slide 是方便你在 slide hub 目录下使用 reveal.js 来创造你的 slide, 并利用 slide hub 来存储</p>
+          <p>轻量级 slide 是让 slide hub 更包容, 容纳外部 slide</p>
+        </section>
+      </section>
+      <!-- 构建静态站点 -->
+      <section>
+        <section>
+          <h3>构建静态站点</h3>
+          <pre class="fragment"><code data-trim class="hljs bash">
+            my-slide $ npm run build
+          </code></pre>
+        </section>
+        <section>
+          <p>
+            构建结果存放在 dist/ 下, 你可以选择以下方式部署:   
+          </p>
+          <ul>
+            <li>直接放在静态服务器下访问</li>
+             <li>
+               <a href="https://pages.github.com/" target="_blank">Github Pages</a>/
+               <a href="https://docs.gitlab.com/ee/user/project/pages/" target="_blank">Gitlab Pages</a>
+              </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <h3>更多</h3>
+        <ol>
+          <li>定制: 具体见 https://github.com/MwumLi/manage-slides</li>
+          <li>reveal.js 的使用: 见官方 demo</li>
+        </ol>
+      </section>
+      <section>Thanks!</section>
+    </div>
+  </div>
+</body>
+
+</html>
