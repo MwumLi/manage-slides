@@ -14,8 +14,12 @@ const commands = [
   },
   {
     name: 'add',
-    command: 'add <slide name>',
-    
+    command: 'add <slide>',
+    options: [
+      {
+        params: ['-l --light', "轻量级 slide"]
+      }
+    ],
     description: '新增一个 slide'
   },
   {
@@ -26,21 +30,35 @@ const commands = [
     name: 'build',
     description: '构建可部署的静态站点'
   },
+  {
+    name: 'custom-portal',
+    command: 'custom-portal',
+    description: '定制首页'
+  },
 ];
 
-for (let { name, command, description } of commands) {
-  program
+for (let { name, command, description, options } of commands) {
+  const cmd = program
     .command(command || name)
     .description(description)
-    .action(require(`../lib/commands/${name}`));
+
+  if (options) {
+    options.forEach(option => {
+      if (option.required) {
+        cmd.requiredOption(...option.params)
+      } else {
+        cmd.option(...option.params)
+      }
+    })
+  }
+  cmd.action(require(`../lib/commands/${name}`));
 }
 
-program.parse(process.argv);
+const argv = process.argv;
+program.parse(argv);
 
-// https://github.com/tj/commander.js/issues/7#issuecomment-32448653
-// Check the program.args obj
-const NO_COMMAND_SPECIFIED = program.args.length === 0;
-
+// https://github.com/tj/commander.js/issues/7#issuecomment-48854967
+const NO_COMMAND_SPECIFIED = !argv.slice(2).length
 if (NO_COMMAND_SPECIFIED) {
   program.help();
 }
