@@ -1,6 +1,6 @@
 {
   "name": "manage-slides",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Centrally manage your slides by reveal.js",
   "bin": {
     "manage-slides": "./bin/index.js",
