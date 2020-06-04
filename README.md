@@ -141,3 +141,7 @@ window._APP = {
   ]
 }
 ```
+
+## TODO
+
+* [ ] 暴露构建和开发配置, 类似 vue cli 中 `vue.config.js`  

@@ -9,8 +9,137 @@
   <div class="reveal">
     <div class="slides">
       <!-- Write your code with reveal.js syntax -->
-      <!-- <section>第一个章节</section> -->
-      <!-- <section>第二个章节</section> -->
+      <section>
+        <p>这是您新创建的 slide  🐳</p>
+        <p>如果你还没想好怎么做, 可以先看看下面...</p>
+      </section>
+      <section>Reveal.js 的简易介绍</section>
+      <!-- 好处 -->
+      <section data-markdown data-separator-vertical="^\n\n" data-separator-notes="^Note:">
+        <script type="text/template">
+          ### 解决了什么问题
+
+
+          - 专注于内容 <!-- .element: class="fragment" -->
+          - 更容易传播 <!-- .element: class="fragment" -->
+          - 对前端开发者和Markdown使用者更友好 <!-- .element: class="fragment" -->
+          - 锻炼你的前端基本功
+          <!-- .element: class="fragment" -->
+
+          Note: 专注内容在于不需要关注效果, 传播是直接编译成 html 的. 更友好是相对前端的同学们来说了.
+        </script>
+      </section>
+      <section>
+        <p>结构预览</p>
+        <img src="https://static.slid.es/support/reveal.js-vertical-slides.gif" height="500" alt="preview">
+      </section>
+      <!-- 基本用法章节 -->
+      <section data-markdown data-separator-vertical="^\n\n" data-separator-notes="^Note:">
+        <script type="text/template">
+          ### 基本用法
+
+
+          ### 节
+
+          ```html
+          <div class="reveal">
+            <div class="slides">
+              <section>Slide 1</section>
+              <section>Slide 2</section>
+            </div>
+          </div>
+          ```
+
+
+          ### 节的选择器
+
+          ```css
+          .reveal > .slides > section
+          ```
+
+
+          ### 子节
+
+          ```html
+          <section>
+            <section>Child 1</section>
+            <section>Child 2</section>
+          </section>
+          ```
+        </script>
+      </section>
+      <!-- Markdown 章节 -->
+      <section>
+        <section>如何使用markdown</section>
+        <section data-markdown>
+          <script type="text/template">
+            最重要的属性 `data-markdown`
+            ```html
+            <section data-markdown>
+              Your markdown
+            </section>
+            ```
+          </script>
+        </section>
+        <section>
+          <p>能不能加载外部的md文档</p>
+          <pre class="fragment"><code>
+            data-markdown="example.md"
+          </code></pre>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ### 写markdown的方式
+          
+            - 分章节写 <!-- .element: class="fragment" -->
+            - 一气呵成的写 <!-- .element: class="fragment" -->
+          </script>
+        </section>
+        <section data-markdown>
+          ### 重点关注的属性
+
+          - data-separator
+          - data-separator-vertical
+        </section>
+      </section>
+      <!-- 动画章节 -->
+      <section>
+        <section>动画</section>
+        <section>
+          <p class="fragment grow">grow</p>
+          <p class="fragment shrink">shrink</p>
+          <p class="fragment fade-out">fade-out</p>
+          <p class="fragment fade-up">fade-up (also down, left and right!)</p>
+          <p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
+          <p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
+          <p class="fragment highlight-current-blue">blue only once</p>
+          <p class="fragment highlight-red">highlight-red</p>
+        </section>
+        <section>
+          <pre><code class="html" data-line-numbers data-trim>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+            <p class="fragment fade-out">fade-out</p>
+            <p class="fragment fade-up">fade-up (also down, left and right!)</p>
+            <p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
+            <p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
+            <p class="fragment highlight-current-blue">blue only once</p>
+            <p class="fragment highlight-red">highlight-red</p>
+          </code></pre>
+        </section>
+        <section data-transition="zoom">Slide 1</section>
+        <section data-transition="zoom">Slide 2</section>
+        <section data-transition="zoom">Slide 3</section>
+        <section data-transition="zoom">Slide 4</section>
+        <section data-transition="zoom">Slide 5</section>
+      </section>
+      <!-- 更多 -->
+      <section>
+        更多使用请看 <a href="https://revealjs.com">revealjs</a>
+      </section>
+      <section>
+        <h2>现在, 请开始属于你的章节吧!</h2>
+      </section>
     </div>
   </div>
 </body>

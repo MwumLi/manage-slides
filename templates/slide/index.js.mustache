@@ -2,8 +2,13 @@ import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/black.css';
 
 import Reveal from 'reveal.js';
+
 // 引入插件: 插件是用来增强 reveal.js 渲染特性
+// Markdown
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+// Highlight
+import 'reveal.js/plugin/highlight/monokai.css';
+import Highlight from 'reveal.js/plugin/highlight/highlight.esm';
 
 // 定义在 html 中引用的资源
 // 因为 html 目前没有被 webpack loader 处理, 所以不能处理 html 里面引用的资源, 因此, 只能通过这种手段保证资源可以正确的被 webpack 所识别,
@@ -11,7 +16,7 @@ import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 // require('./images/what-ppt.gif');
 
 let deck = new Reveal({
-  plugins: [Markdown], // 这里引用插件
+  plugins: [Markdown, Highlight], // 这里引用插件
   history: true,
 })
 deck.initialize();
